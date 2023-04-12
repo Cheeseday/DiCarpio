@@ -1,0 +1,70 @@
+extends ../../../layouts/layout.pug
+
+block body
+    +header
+    +bottom_menu()
+    //- .container
+    //-     .row
+    //-         h1.fw-semibold.fs-4.fs-md-3.fs-lg-2 Свежемороженая рыба
+    //-     .row.row-cols-2.row-cols-md-3.row-cols-lg-4.row-cols-xl-5
+    //-             +catalog_card('Dorado', '45 руб / кг', 'цена за упаковку 0,7 кг - 19,15 руб')
+    //-                 block card_image
+    //-                     img(src='../../../assets/images/product_categories/fillets_and_steaks/salmon_fillet/salmon_fillet.jpg' alt='Dorado')
+
+    //-             +catalog_card('Dorado', '45 руб / кг', 'цена за упаковку 0,7 кг - 19,15 руб')
+    //-                 block card_image
+    //-                     img(src='../../../assets/images/product_categories/fresh_frozen_fish/dorado/dorado_2.jpeg' alt='Dorado')
+
+    //-             +catalog_card('Dorado', '45 руб / кг', 'цена за упаковку 0,7 кг - 19,15 руб')
+    //-                 block card_image
+    //-                     img(src='../../../assets/images/product_categories/fresh_frozen_fish/dorado/dorado_3.jpeg' alt='Dorado')
+
+    //-             +catalog_card('Dorado', '55 руб / кг', 'цена за упаковку 0,7 кг - 19,15 руб')
+    //-                 block card_image
+    //-                     img(src='../../../assets/images/product_categories/fresh_frozen_fish/dorado/dorado_2.jpeg' alt='Dorado')
+
+    //-             +catalog_card('Dorado', '55 руб / кг', 'цена за упаковку 0,7 кг - 19,15 руб')
+    //-                 block card_image
+    //-                     img(src='../../../assets/images/product_categories/fresh_frozen_fish/dorado/dorado_2.jpeg' alt='Dorado')
+    
+    +category('Свежемороженая рыба')
+        block content
+            +catalog_card('Сибас н/р 300-400', '23.60 руб / кг', 'за упаковку 750 гр - 17,70 руб', 'sea_bass.html')
+                //+img('../../../assets/images/product_categories/fresh_frozen_fish/dorado/dorado.jpeg')
+                img(src='../../../assets/images/product_categories/fresh_frozen_fish/sea_bass/sea_bass_1.jpeg' alt='Sea bass 300-400' class='rounded-top card-img-top')
+            +catalog_card('Дорадо н/р 300-400', '27.35 руб / кг', 'цена за упаковку 0,7 кг - 19,15 руб', 'dorado.html')
+                img(src='../../../assets/images/product_categories/fresh_frozen_fish/dorado/dorado.jpeg' alt='Dorado_300-400' class='rounded-top card-img-top')
+            +catalog_card('Окунь морской 300-500 ПБГ', '21.55 руб / кг', 'за упаковку 850 кг - 18,32 руб', 'red_sea_perch.html')
+                img(src='../../../assets/images/product_categories/fresh_frozen_fish/sea_perch/red-sea-perch.jpg' alt='Red sea perch' class='rounded-top card-img-top')
+            +catalog_card('Треска Атлантическая ПБГ 0,5-1,0 кг', '17.70 руб / кг', 'цена за упаковку 1,5 кг - 26,55 руб', 'codfish.html')
+                img(src='../../../assets/images/product_categories/fresh_frozen_fish/codfish/cod-codfish.jpg' alt='Cod 500-1000' class='rounded-top card-img-top')
+            +catalog_card('Палтус ПБГ 2-3 кг', '41.40 руб / кг', 'цена за упаковку 2,2 кг - 91,10 руб', 'halibut.html')
+                img(src='../../../assets/images/product_categories/fresh_frozen_fish/halibut_gwh/halibut-gwh.jpeg' alt='Halibut' class='rounded-top card-img-top')
+            +catalog_card('Кета ПБГ', '25.70 руб / кг', 'цена за упаковку 1,6 кг - 41,10 руб', 'chum_salmon.html')
+                img(src='../../../assets/images/product_categories/fresh_frozen_fish/chum_salmon/chum_salmon_1.jpeg' alt='Chum salmon' class='rounded-top card-img-top') 
+            +catalog_card('Хек Hubbsi 450-600 ПБГ', '16.20 руб / кг', 'цена за упаковку 1 кг', 'hake_hubbsi.html')
+                img(src='../../../assets/images/product_categories/fresh_frozen_fish/hake_hubbsi/hake_hubbsi_1.jpg' alt='Hake Hubbsi' class='rounded-top card-img-top')
+                
+
+            
+    block description
+        .container-xxl
+            .category_description.p-2.p-md-3
+                h2.text-center.fs-4.fs-sm-3 Свежемороженая рыба в DiCarpio
+                p Компания DiCarpio предлагает широкий выбор замороженных рыбных продуктов: целые рыбки, тушки, филе, порционные куски различного веса и размера.
+                h3.text-center.fs-5.fs-sm-4 Почему свежемороженая рыба лучше, чем свежая
+                p Кажется логичным, что свежая рыба лучше замороженной, но на самом деле это не всегда так.
+                p Большая часть морской рыбы обрабатывается и замораживается непосредственно на рыболовных судах через несколько минут после вылова. Рыба, выращенная в рыбных хозяйствах, подвергается заморозке в морозильных камерах, установленных та территории ферм.
+                p Ультрабыстрая сухая заморозка сохраняет текстуру, вкус, питательные вещества продукта (витамины, минералы, омега-3 жирные кислоты).
+                p Мороженая рыба &#45; это:
+                ul
+                    li <b> Недорого. </b> Цена свежезамороженной рыбы примерно на 20-25% ниже, а вкусовые качества ничуть не хуже.
+                    li <b> Безопасно. </b> Кто даст гарантию, что рыба, продающаяся как свежая, не была привезена издалека и разморожена перед реализацией. Даже если это и не так, в свежей рыбе с космической скоростью размножаются патогенные микроорганизмы, которые участвуют в опасных для здоровья процессах гниения и вызывают пищевые отравления. Весь товар имеет ветеринарные сертификаты и удостоверения качества.
+                    li <b> Полезно. </b> Во-первых, замораживание – это естественный процесс, который не требует использования консервантов. К тому же оно продлевает рыбный сезон, делая обитателей рек, озер, прудов, морей и океанов, выловленных летом, вкусным и полезным лакомством на вашем столе в любое время года.
+                    li <b> Удобно. </b> В конце рабочего дня что может быть удобнее, чем купить очищенную замороженную тушку, стейк или филе? Перед приготовлением ее достаточно положить в закрывающийся пакет и ненадолго опустить в воду. Как только рыба станет немного гибкой, можно начинать готовить. Нежирную рыбу типа тилапии или трески можно и вовсе не размораживать.
+                    li <b> Доступно. </b> Купить свежую охлажденную рыбу в Беларуси намного сложнее, чем мороженую.
+                p Интернет-магазин DiCarpio реализует и доставляет рыбу и морепродукты, выращенные в наиболее экологически чистых и естественных условиях, подвергшиеся максимально быстрой заморозке.
+
+
+    
+    +footer("darken")

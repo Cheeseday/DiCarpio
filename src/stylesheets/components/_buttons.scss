@@ -1,0 +1,78 @@
+/* Default duocolor button */
+
+/* 
+Buttons type
+
+button
+button_wide
+button_narrow
+button_product_card
+monochomatic_button
+darken_button
+
+*/
+
+.button_narrow {
+    @extend %button_settings;
+    padding: 5px 13px;
+    color: $layout-color;
+    background-color: $white;
+    font-size: 11px;
+}
+
+.button_wide {
+    @extend %button_settings;
+    padding: 15px 25px;
+    font-size: 15px;
+    color: $layout-color;
+    background-color: $white;
+}
+
+.button_product_card {
+    @extend %button_settings;
+    height: 36px;
+    margin-top: 12px;
+    padding: 0 12px;
+    font-size: $font-size-md;
+    color: $layout-color;
+    background-color: $white;
+    i {
+        display: block;
+        width: 18px;
+        height: 18px;
+        margin-right: 6px;
+        padding: 14px 14px;
+        background: url(https://dicarpio.by/wp-content/themes/dicarpio/img/icon-cart.svg) no-repeat center;
+    }
+}
+
+.button_darken {
+    @extend %button_settings;
+    padding: 15px 25px;
+    font-size: 15px;
+    color: $white;
+    background-color: $layout-color;
+}
+
+.button_narrow_darken {
+    @extend %button_settings;
+    padding: 5px 13px;
+    font-size: 11px;
+    color: $white;
+    background-color: $layout-color;
+}
+
+.button_monochromatic {
+    @extend %button_multichromtic_settings;
+    width: min(100%, 310px);
+}
+
+.button_monochromatic_md {
+    @extend %button_multichromtic_settings;
+    width: min(100%, 331px);
+}
+
+.button_monochromatic_lg {
+    @extend %button_multichromtic_settings;
+    width: min(100%, 353px);
+}

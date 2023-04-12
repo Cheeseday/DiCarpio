@@ -1,0 +1,10 @@
+mixin link(text='Link', href='#', cls)
+    a(href=`${href}` class= cls, class)= text
+
+//- mixin stretchedLink(text='Link', href='#', cls)
+//-     a(href=`${href}` class= stretched-link cls)= text 
+
+mixin stretchedButton(href='#', cls)
+    a.button_product_card.stretched-link.w-75.mb-3.mx-auto.order-2(href=`${href}` class= cls)
+        i
+        | В корзину

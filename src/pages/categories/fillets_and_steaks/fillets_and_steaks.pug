@@ -1,0 +1,32 @@
+extends ../../../layouts/layout.pug
+
+block body
+    +header
+    +bottom_menu()
+    +category('Филе и стейки')
+        block content
+            +catalog_card('Филе сёмги н/к с/м', '84.00 руб / кг', 'цена за упаковку 2,0 кг - 168 руб', 'salmon_fillet.html')
+                img(src='../../../assets/images/product_categories/fillets_and_steaks/salmon_fillet/salmon_fillet.jpg' alt='Salmon fillet' class='rounded-top card-img-top')
+            +catalog_card('Стейки нерки 150-250', '38.50 руб / кг', 'цена за упаковку 600 гр - 23,10 руб', 'dorado.html')
+                img(src='../../../assets/images/product_categories/fillets_and_steaks/sockeye_steaks/sockeye_1.jpeg' alt='Sockeye' class='rounded-top card-img-top') 
+            +catalog_card('Медальоны хека', '20.50 руб / кг', 'цена за упаковку 1,1 кг - 22,55 руб', 'hake_medallions.html')
+                img(src='../../../assets/images/product_categories/fillets_and_steaks/hake_medallions/hake_medallions_1.jpeg' alt='Hake medallions' class='rounded-top card-img-top')
+            +catalog_card('Стейки тунца 50+', '16.50 руб / уп', 'цена за упаковку 0,5 кг', 'dorado.html')
+                img(src='../../../assets/images/product_categories/fillets_and_steaks/tuna_steaks/tuna_steaks_1.jpeg' alt='Tuna steaks' class='rounded-top card-img-top') 
+            +catalog_card('Стейки форели 200-300', '60.00 руб / кг', 'цена за упаковку 550 гр - 33,00 руб', 'salmon_fillet.html')
+                img(src='../../../assets/images/product_categories/fillets_and_steaks/salmon_steaks/salmon_steak_1.jpg' alt='Salmon steaks' class='rounded-top card-img-top') 
+            +catalog_card('Медальоны тунца', '13.10 руб / уп', 'за упаковку 500 гр', 'tuna_medallions.html')
+                img(src='../../../assets/images/product_categories/fillets_and_steaks/tuna_medallions/tuna_medallions_1.jpg' alt='Tuna medallions' class='rounded-top card-img-top') 
+            //- +catalog_card('Дорадо н/р 300-400', '27.35 руб / кг', 'цена за упаковку 0,7 кг - 19,15 руб', 'dorado.html')
+            //-     img(src='../../../assets/images/product_categories/fresh_frozen_fish/dorado/dorado.jpeg' alt='Dorado_300-400' class='rounded-top card-img-top') 
+            //- +catalog_card('Дорадо н/р 300-400', '27.35 руб / кг', 'цена за упаковку 0,7 кг - 19,15 руб', 'dorado.html')
+            //-     img(src='../../../assets/images/product_categories/fresh_frozen_fish/dorado/dorado.jpeg' alt='Dorado_300-400' class='rounded-top card-img-top') 
+            //- +catalog_card('Дорадо н/р 300-400', '27.35 руб / кг', 'цена за упаковку 0,7 кг - 19,15 руб', 'dorado.html')
+            //-     img(src='../../../assets/images/product_categories/fresh_frozen_fish/dorado/dorado.jpeg' alt='Dorado_300-400' class='rounded-top card-img-top') 
+            //- +catalog_card('Дорадо н/р 300-400', '27.35 руб / кг', 'цена за упаковку 0,7 кг - 19,15 руб', 'dorado.html')
+            //-     img(src='../../../assets/images/product_categories/fresh_frozen_fish/dorado/dorado.jpeg' alt='Dorado_300-400' class='rounded-top card-img-top') 
+            //- +catalog_card('Дорадо н/р 300-400', '27.35 руб / кг', 'цена за упаковку 0,7 кг - 19,15 руб', 'dorado.html')
+            //-     img(src='../../../assets/images/product_categories/fresh_frozen_fish/dorado/dorado.jpeg' alt='Dorado_300-400' class='rounded-top card-img-top')
+
+    
+    +footer("darken")

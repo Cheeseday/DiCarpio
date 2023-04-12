@@ -1,0 +1,68 @@
+/* Product card settings */
+.product_wrap {
+    color: $title_color;
+    li, b, td, p{
+        font-size: $font-size-sm;
+        color: $title_color;
+    }
+    td, p {
+        font-weight: 500;
+    }
+
+    h1.product__title,
+    .product__price, 
+    h2 {
+        font-weight: 700;
+        font-size: $font-size-xl;
+    }
+    h2 {
+        color: $main-color;
+    }
+
+    h3 {
+        font-size: $font-size-mdlg;
+    }
+    ul {
+        padding: 0;
+        list-style: none;
+        li {
+            @extend %link_and_icon_styles;
+            padding: 10px 17px;
+        }
+    }
+}
+
+.product_main__info {
+    .product__price {
+        color: $main-color;
+    }
+    span {
+        font-size: $font-size-xs;
+    }
+}
+
+#how_to_cook_wrapper {
+    p {
+        width: min(800px, 100%);
+    }
+}
+
+/* Settings for tabs block */
+//For list
+#tabs__caption { 
+    .active {
+        color: $main-color;
+        border-bottom: 3px solid $main-color;
+        cursor: text;
+    }
+    .inactive {
+        color: $title_color;
+    }
+}
+// For div
+.active { 
+    display: block;
+}
+.inactive {
+    display: none;
+}

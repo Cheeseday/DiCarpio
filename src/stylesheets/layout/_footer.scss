@@ -1,0 +1,73 @@
+/* Footer contacts block */
+
+.footer_contacts {
+    .footer_link {
+        font-weight: 700;
+        font-size: $font-size-md;
+        line-height: 17px;
+        @extend %footer_links;
+    }    
+    .footer__phone_link {
+        i {
+            width: 34px;
+            height: 34px;
+            background: url(https://dicarpio.by/wp-content/themes/dicarpio/img/mobile_menu/phone_mobile_menu.svg) center no-repeat;
+        }
+    }      
+    .footer__mail_link {
+        i {
+            width: 34px;
+            height: 34px;
+            background: url(https://dicarpio.by/wp-content/themes/dicarpio/img/icon-email.svg) center no-repeat;
+            color: $black;
+        }
+    }
+    .footer__inst_link i{
+        width: 33px;
+        height: 33px;
+        background: url(https://dicarpio.by/wp-content/themes/dicarpio/img/instagram_orange.svg) center no-repeat;
+    }
+    .footer__booking_link i{
+        width: 38px;
+        height: 38px;
+        background: url(https://dicarpio.by/wp-content/themes/dicarpio/img/icon-time.svg) center/32px no-repeat;
+    }
+}
+
+.footer_catalog, 
+.footer_for_customers {
+    ul {
+        padding: 0;
+        list-style: none;
+        a {
+            font-weight: 500;
+            font-size: $font-size-sm;
+            @extend %footer_links;
+        }
+    }
+}
+
+.footer_subscribe {
+    img{
+        width: 24px;
+        height: 24px;
+    }
+    span {
+        font-weight: 600;
+        font-size: $font-size-base;
+        color: $layout-color;
+    }
+    p {
+        font-size: $font-size-xs;
+        letter-spacing: 0.04rem;
+    }
+}
+
+footer.footer_darken {
+    background-color: $layout-color;
+    color: $white;
+    a,
+    .footer_link {
+        @extend %footer_links_darken;
+    }
+}

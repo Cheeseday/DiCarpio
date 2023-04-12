@@ -1,0 +1,133 @@
+mixin header()
+    header.m-0.p-0
+        .container-fluid
+            .row.nav_row.px-0
+                .col-12.d-none.d-sm-block.flex.justify-content-start.px-0
+                    nav.navbar.navbar-expand-sm.nav_color.py-1
+                        .container-xxl.p-0
+                            #navbarNavAltMarkup.collapse.navbar-collapse.justify-content-between
+                                .navbar-nav.fs-6.fw-medium
+                                    a.nav-link.main_nav(aria-current='page' href='index.html') 
+                                        | Главная
+                                    a.nav-link.main_nav(href='fresh_frozen_fish.html') О нас
+                                    a.nav-link.main_nav(href='#') Доставка и оплата
+                                    a.nav-link.main_nav(href='#') Контакты      
+                                #phone_icon_mini.d-block.d-md-none.me-3.me-md-0
+        .container-xxl
+            .row
+                .col-12
+                    .d-flex.flex-row.justify-content-between
+                        .hamburger-menu.d-md-none
+                            input#menu__toggle(type='checkbox')
+                            label.menu__btn(for='menu__toggle')
+                                i
+                            .menu__box.menu__boxs
+                                div
+                                    ul
+                                        li.py-2
+                                            a.menu__box__item(href='fresh_frozen_fish.html')
+                                                img.me-2(src='https://dicarpio.by/wp-content/uploads/2020/10/icon_7.svg' alt='Fresh frozen fish')
+                                                | Свежемороженая рыба
+                                        li.py-2
+                                            a.menu__box__item(href='fillets_and_steaks.html')
+                                                img.me-2(src='https://dicarpio.by/wp-content/uploads/2020/10/icon_6.svg' alt='Fillets and steaks')
+                                                | Филе и стейки
+                                        li.py-2
+                                            a.menu__box__item(href='#')
+                                                img.me-2(src='https://dicarpio.by/wp-content/uploads/2020/10/icon_4.svg' alt='Seafood')
+                                                | Морепродукты
+                                        li.py-2
+                                            a.menu__box__item(href='semis.html')
+                                                img(src='https://dicarpio.by/wp-content/uploads/2022/02/icon_fabrikat1.svg' alt='Semis')
+                                                | Полуфабрикаты
+                                        li.py-2
+                                            a.menu__box__item(href='red_fish.html')
+                                                img.me-2(src='https://dicarpio.by/wp-content/uploads/2020/10/icon_8.svg' alt='Red fish')
+                                                | Красная рыба
+                                        li
+                                            a.menu__box__item.disabled(href='#')
+                                                img.me-2(src='https://dicarpio.by/wp-content/uploads/2020/10/icon_8.svg' alt='Cooled fish')
+                                                | Охлажденная рыба
+                                        li.py-2
+                                            a.menu__box__item(href='caviar.html')
+                                                img.me-2(src='https://dicarpio.by/wp-content/uploads/2020/10/icon_3.svg' alt='Caviar')
+                                                | Икра
+                                        li.py-2
+                                            a.menu__box__item(href='#')
+                                                img.me-2(src='https://dicarpio.by/wp-content/uploads/2020/10/icon_1.svg' alt='Groceries and sauses')
+                                                | Бакалея и соусы
+                                        li.py-2
+                                            a.menu__box__item.disabled(href='#')
+                                                img.me-2(src='https://dicarpio.by/wp-content/uploads/2022/02/10.svg' alt='Side dishes')
+                                                | Гарниры
+                                        li.py-2
+                                            a.menu__box__item(href='#')
+                                                img.me-2(src='https://dicarpio.by/wp-content/uploads/2020/10/icon_5.svg' alt='Oils and spices')
+                                                | Масла и специи
+                                .darken.d-sm-none
+                                    ul
+                                        li.py-2
+                                            a.menu__box__item(href='#') О нас
+                                        li.py-2
+                                            a.menu__box__item(href='#') Доставка и оплата
+                                        li.py-2
+                                            a.menu__box__item Контакты
+                        .d-none.d-md-flex.flex-row.align-items-center
+                            div
+                                a.dropdown_menu_link.dropdown-toggle.me-2.me-lg-4(href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false') Каталог
+                                    ul.dropdown-menu
+                                        li.py-1
+                                            a.menu__box__item.dropdown-item(href='fresh_frozen_fish.html')
+                                                img.me-2(src='https://dicarpio.by/wp-content/uploads/2020/10/icon_7.svg' alt='Fresh frozen fish')
+                                                span Свежемороженая рыба
+                                        li.py-1
+                                            a.menu__box__item.dropdown-item(href='fillets_and_steaks.html')
+                                                img.me-2(src='https://dicarpio.by/wp-content/uploads/2020/10/icon_6.svg' alt='Fillets and steaks')
+                                                span Филе и стейки
+                                        li.py-1
+                                            a.menu__box__item.dropdown-item(href='caviar.html')
+                                                img.me-2(src='https://dicarpio.by/wp-content/uploads/2020/10/icon_3.svg' alt='Caviar')
+                                                span Икра
+                                        li.py-1
+                                            a.menu__box__item.dropdown-item(href='red_fish.html')
+                                                img.me-2(src='https://dicarpio.by/wp-content/uploads/2020/10/icon_8.svg' alt='Red fish')
+                                                span Красная рыба
+                                        li.py-1
+                                            a.menu__box__item.dropdown-item(href='#')
+                                                img.me-2(src='https://dicarpio.by/wp-content/uploads/2020/10/icon_4.svg' alt='Seafood')
+                                                span Морепродукты
+                                        li.py-1
+                                            a.menu__box__item.dropdown-item(href='semis.html')
+                                                img.me-2(src='https://dicarpio.by/wp-content/uploads/2022/02/icon_fabrikat1.svg' alt='Semis')
+                                                span Полуфабрикаты
+                                        li.py-1
+                                            a.menu__box__item.dropdown-item.disabled(href='#')
+                                                img.me-2(src='https://dicarpio.by/wp-content/uploads/2020/10/icon_8.svg' alt='Cooled fish')
+                                                span Охлажденная рыба
+                                        li.py-1
+                                            a.menu__box__item.dropdown-item(href='#')
+                                                img.me-2(src='https://dicarpio.by/wp-content/uploads/2020/10/icon_1.svg' alt='Groceries and sauses')
+                                                span Бакалея и соусы
+                                        li.py-1
+                                            a.menu__box__item.dropdown-item.disabled(href='#')
+                                                img.me-2(src='https://dicarpio.by/wp-content/uploads/2022/02/10.svg' alt='Side dishes')
+                                                span Гарниры
+                                        li.py-1
+                                            a.menu__box__item.dropdown-item(href='#')
+                                                img.me-2(src='https://dicarpio.by/wp-content/uploads/2020/10/icon_5.svg' width='32' alt='Oils and spices')
+                                                span Масла и специи
+                                    a.link_promo.mt-1(href='#')
+                                        i
+                                        | Акции
+                        div.logo
+                            a(href='#')
+                                img.img-fluid.pt-2.pb-1.pb-sm-0(src='./assets/icons/logo.svg' alt='logotype')
+
+                        .d-flex.flex-row.justify-content-center.align-items-center
+                            .phone_wrapper.d-none.d-md-flex.flex-row.justify-content-center.align-items-center.me-2.border-end.border-2
+                                .phone_icon
+                                a.phone_link.icon-link.mx-2.ms-lg-4.me-lg-3(href='tel:+375 (25) 90-554-09') + 375 (25) 905-54-09
+                            a#favourite_icon.icon-link.ms-2.ms-lg-3(href='test.html'): i
+                            a#user_account.icon-link.ms-2.ms-lg-3(href='profile.html'): i
+                            a#grosery.icon-link.ms-2.ms-lg-3(href='#'): i
+            hr.mt-2

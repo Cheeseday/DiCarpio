@@ -1,0 +1,43 @@
+extends ../../layouts/layout.pug
+
+block body
+    +header
+
+    main
+        section.edit_personal_data.mb-5
+            .container-xxl
+                .row
+                    h1.fw-semibold.fs-4.fs-md-3.fs-lg-1.px-0.py-2.py-lg-3.ps-3.ps-md-4.m-0 Личные данные
+                .row
+                    .personal_data.col-12.pb-3.ps-3.ps-md-4.ps-lg-5
+                        h3.my-3 Персональные данные
+                        .form(method='get' name='user_personal_data')
+                            .container-fluid
+                                .row
+                                    .mb-3.col-12.col-sm-8.col-md-6.col-lg-5.col-xl-4.col-xxl-3
+                                        label.form-label.fw-semibold(for='username') Имя
+                                            span *
+                                        input#username.form-control.rounded-pill(type='text' name='username' placeholder='Введите имя' maxlength='35' required)
+                                    .mb-3.col-12.col-sm-8.col-md-6.col-lg-5.col-xl-4.col-xxl-3
+                                        label.form-label.fw-semibold(for='tel') Номер телефона
+                                            span *
+                                        input#tel.form-control.rounded-pill(type='tel' name='tel' placeholder='Введите телефон' required)
+                                    .mb-3.col-12.col-sm-8.col-md-6.col-lg-5.col-xl-4.col-xxl-3
+                                        label.form-label.fw-semibold(for='email') Email
+                                            span *
+                                        input#email.form-control.rounded-pill(type='email' name='email' placeholder='Введите E-mail' maxlength='45' required)
+                                    .mb-3.col-12.col-sm-8.col-md-6.col-lg-5.col-xl-4.col-xxl-3
+                                        label.form-label.fw-semibold(for='instagram') Ник Instagram
+                                        input#instagram.form-control.rounded-pill(type='text' name='instagram' placeholder='@nameprofile' pattern='/^@/' maxlength='35')
+                                    .mb-3.col-12.col-sm-8.col-md-6.col-lg-5.col-xl-4.col-xxl-3
+                                        label.form-label.fw-semibold(for='password') Новый пароль
+                                        input#password.form-control.rounded-pill(type='password' name='password' aria-labelledby='passwordHelpInline' placeholder='Введите пароль' minlength='6' maxlength='20')
+                                        span#passwordHelpInline.form-text Должен быть от 6 до 20 символов
+                                    .mb-3.col-12.col-sm-8.col-md-6.col-lg-5.col-xl-4.col-xxl-3
+                                        label.form-label.fw-semibold(for='inputPasswordAgain') Повторите пароль
+                                        input#inputPasswordAgain.form-control.rounded-pill(type='password' aria-labelledby='passwordHelp' placeholder='Повторите пароль*' minlength='6' maxlength='20')
+                                        span#passwordHelp.form-text Должен быть от 6 до 20 символов
+                                .row
+                                    button.button_wide.mb-3.fs-6(type='submit') Сохранить изменения
+                a.button_narrow.mt-3.ms-4(href='profile.html' role='button') Вернуться назад
+    +footer('darken')

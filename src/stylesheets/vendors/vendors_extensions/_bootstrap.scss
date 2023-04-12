@@ -1,0 +1,60 @@
+/* Carousel settings */
+
+@media only screen and (min-width: 768px) {
+    .carousel-control-next-icon, 
+    .carousel-control-prev-icon {
+        width: 3rem;
+        height: 3rem;
+    }
+}
+
+@media only screen and (min-width: 320px) {
+    .carousel-control-next, 
+    .carousel-control-prev {
+        width: 10%;   
+    }
+}
+
+.bottom_menu,
+.product_carousel {
+    .carousel-control-next-icon,
+    .carousel-control-prev-icon { 
+        display: inline-block;
+        width: 2rem;
+        height: 2rem;
+        background-color: $white;
+        background-repeat: no-repeat;
+        border-radius: 100px;
+        background-size: 55% 55%;
+    }
+
+    .carousel-control-prev-icon {
+        background-position: 45%;
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' %3e%3cpath stroke='midnightblue' d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
+    }
+
+    .carousel-control-next-icon {
+        background-position: 55%;
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' %3e%3cpath stroke='midnightblue' d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e    ");
+    }
+
+    @media only screen and (min-width: 320px) {
+        .carousel-control-next, 
+        .carousel-control-prev {
+            width: 4%;   
+        }
+    }
+}
+
+.product_carousel {
+    .carousel-control-next, 
+    .carousel-control-prev {
+        width: 8%;   
+    }
+    @media only screen and (min-width: 320px) {
+        .carousel-control-next, 
+        .carousel-control-prev {
+            width: 13%;   
+        }
+    }
+}

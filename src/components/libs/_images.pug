@@ -1,0 +1,9 @@
+mixin img(img, alt='image', cls)
+    img(src=require(`${img}`) alt=`${alt}`)
+
+mixin image(img, alt='images', cls)
+    img(src=require(`${img}`) alt=`${alt}` class= cls)
+
+mixin product_images(items)
+    each item in items
+        img.img-fluid(src= `${item.src}`, alt= `${item.alt}`)

@@ -1,0 +1,7 @@
+div.card {
+    @include hoveringLink(0.85);
+}
+
+.menu__box__item {
+    @include hoveringLink();
+}

@@ -1,0 +1,26 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: $title_color;
+}
+
+header {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.hidden {
+    display: none;
+}

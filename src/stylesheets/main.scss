@@ -1,0 +1,29 @@
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+@import 'abstracts/placeholders';
+
+@import 'vendors/bootstrap.min';
+@import 'vendors/vendors_extensions/bootstrap';
+
+//@import 'base/reset';
+@import 'base/base';
+//@import 'base/typography';
+
+//@import 'layout/navigation';
+//@import 'layout/grid';
+@import 'layout/header';
+@import 'layout/footer';
+//@import 'layout/sidebar';
+//@import 'layout/forms';
+
+@import 'components/buttons';
+@import 'components/carousel';
+@import 'components/links';
+@import 'components/catalog_card';
+@import 'components/product_card';
+//@import 'components/cover';
+//@import 'components/dropdown';
+
+@import 'pages/home_page';
+@import 'pages/profile'
+//@import 'pages/contact';

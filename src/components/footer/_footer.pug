@@ -1,0 +1,73 @@
+mixin footer(bc= 'defaultColor')
+    footer(class= `pt-4 px-2 footer_${bc}`)
+        .container-xxl
+            .row
+                .footer_contacts.col-12.col-md-8.col-lg-4.mb-5
+                    h6.mb-3.fw-bolder Контакты
+                    .container-xxl
+                        .row
+                            .col-12.d-flex.flex-row.align-items-center.p-0.mb-3
+                                a.footer_link.footer__phone_link.icon-link(href='tel:+375 (25) 90-554-09')
+                                    i.me-2
+                                    |                                     + 375 (25) 905-54-09
+                        .row
+                            .col-12.d-flex.flex-row.align-items-center.p-0.mb-3
+                                a.footer_link.footer__mail_link.icon-link(href="mailto:aleksandrkirilushkin@gmail.com?subject=What's up, dude?")
+                                    i.me-2
+                                    |                                     aleksandrkirilushkin@gmail.com
+                        .row
+                            .col-12.d-flex.flex-row.align-items-center.p-0.mb-3
+                                .footer_link.footer__booking_link.icon-link
+                                    i.me-sm-2
+                                    |                                     Прием заказов онлайн в будние дни с 9.00 до 18.00
+                        .row
+                            .col-12.d-flex.flex-row.align-items-center.p-0.mb-3
+                                a.footer_link.footer__inst_link.icon-link(href='#')
+                                    i.me-2
+                                    |                                     Приём заказов через инстаграм ежедневно
+                .footer_catalog.col-6.col-md-4.col-lg-2.mb-5
+                    h6.mb-3.fw-bolder Каталог
+                    ul
+                        li.pb-2
+                            a(href='fresh_frozen_fish.html') Свежемороженая рыба
+                        li.pb-2
+                            a(href='caviar.html') Икра
+                        li.pb-2
+                            a(href='fillets_and_steaks.html') Филе и стейки
+                        li.pb-2
+                            a(href='semis.html') Полуфабрикаты
+                        li.pb-2
+                            a(href='#') Морепродукты
+                        li.pb-2
+                            a(href='red_fish.html') Красная рыба
+                        li.pb-2
+                            a(href='#') Охлажденная рыба
+                .footer_for_customers.col-6.col-md-4.col-lg-2.mb-5
+                    h6.mb-3.fw-bolder Покупателям
+                    ul
+                        li.pb-2
+                            a(href='#') О нас
+                        li.pb-2
+                            a(href='#') Доставка и оплата
+                        li.pb-2
+                            a(href='#') Контакты
+                .footer_subscribe.col-12.col-md-8.col-lg-4.mb-5
+                    h6.mb-3.fw-bolder Подпишитесь на нас в социальных сетях
+                    .container-xxl
+                        .row.footer_inst
+                            .col-12.p-0.mb-3
+                                .mb-2
+                                    img.me-2(src='../../assets/icons/instagram.svg' alt='instagram')
+                                    span Наш Instagram
+                                p
+                                    | В профиле мы делимся интересными статьями, новостями об акциях, рецептами и еще многим другим
+                                button.button_narrow(class= `button_narrow_${bc}`) Подписаться
+                        .row.footer_twi
+                            .col-12.p-0.mb-3
+                                .mb-2
+                                    img.me-2(src='../../assets/icons/twitter.svg' alt='twitter')
+                                    //i
+                                    span Наш Twitter
+                                p
+                                    | В профиле мы делимся интересными статьями, новостями об акциях, рецептами и еще многим другим
+                                button.button_narrow(class= `button_narrow_${bc}`) Подписаться

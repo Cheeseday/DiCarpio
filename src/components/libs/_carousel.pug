@@ -1,0 +1,72 @@
+mixin cl(id='carouselSlide', items, activeSlide= 2, controls='c', indicators='i')
+    .carousel.slide(id=`${id}`)
+        if (indicators === 'i')
+            .carousel-indicators
+                each item, index in items
+                    button(
+                        aria-current=(activeSlide === index + 1 ? true : false)
+                        class=(activeSlide === index + 1 ? "active" : '')
+                        type='button'
+                        data-bs-target=`#${id}`
+                        data-bs-slide-to=`${index}`
+                        aria-label=`Slide ${index + 1}`)
+        .carousel-inner
+            each item, index in items
+                .carousel-item(class=(activeSlide === index + 1 ? "active" : ''))
+                    img.img-fluid.rounded(src= `${item.src}`, alt= `${item.alt}`)
+                    //- if (item.title || item.subtitle)
+                    //-     .carousel-caption.d-none.d-md-block
+                    //-         if (item.title)
+                    //-             h5= item.title
+                    //-         if (item.subtitle)
+                    //-             p= item.subtitle
+        if (controls === 'c')
+            button.carousel-control-prev(type='button' data-bs-target=`#${id}` data-bs-slide='prev')
+                span.carousel-control-prev-icon(aria-hidden='true')
+                span.visually-hidden Previous
+            button.carousel-control-next(type='button' data-bs-target=`#${id}` data-bs-slide='next')
+                span.carousel-control-next-icon(aria-hidden='true')
+                span.visually-hidden Next
+
+mixin start_page_carousel()
+    article
+        .container-xxl
+            .row
+                .col-12
+                    #carouselActions.carousel.slide.carousel-fade(data-bs-ride='carousel')
+                        .carousel-indicators.mb-1.mb-md-2.mb-lg-3
+                            button.active(type='button' data-bs-target='#carouselActions' data-bs-slide-to='0' aria-current='true' aria-label='Slide 1')
+                            button(type='button' data-bs-target='#carouselActions' data-bs-slide-to='1' aria-label='Slide 2')
+                            button(type='button' data-bs-target='#carouselActions' data-bs-slide-to='2' aria-label='Slide 3')
+                            button(type='button' data-bs-target='#carouselActions' data-bs-slide-to='3' aria-label='Slide 4')
+                            button(type='button' data-bs-target='#carouselActions' data-bs-slide-to='4' aria-label='Slide 5')
+                            button(type='button' data-bs-target='#carouselActions' data-bs-slide-to='5' aria-label='Slide 6')
+                            button(type='button' data-bs-target='#carouselActions' data-bs-slide-to='6' aria-label='Slide 7')
+                        .carousel-inner
+                            .carousel-item.active
+                                a(href='dorado.html')
+                                    img.d-block.w-100.rounded(src='../../assets/images/main_page_images/main_dorado.jpg' alt='Dorado')
+                            .carousel-item
+                                a(href='#')
+                                    img.d-block.w-100.rounded(src='assets/images/main_page_images/kalmar-tushka.jpg' alt='Squid carcass')
+                            .carousel-item
+                                a(href='hake_medallions.html')
+                                    img.d-block.w-100.rounded(src='assets/images/main_page_images/medalony-heka.jpg' alt='Hake medallions')
+                            .carousel-item
+                                a(href='sea_bass.html')
+                                    img.d-block.w-100.rounded(src='assets/images/main_page_images/sibas-300-400.jpg' alt='Sea bass')
+                            .carousel-item
+                                a(href='hake_medallions.html')
+                                    img.d-block.w-100.rounded(src='../../assets/images/main_page_images/main_stejki-nerki.jpg' alt='sockeye steaks')
+                            .carousel-item
+                                a(href='tuna_medallions.html')
+                                    img.d-block.w-100.rounded(src='../../assets/images/main_page_images/main_stejki-tuncza.jpg' alt='tuna steaks')
+                            .carousel-item
+                                a(href='sea_bass.html')
+                                    img.d-block.w-100.rounded(src='../../assets/images/main_page_images/main_shhupalcza_kalmara.jpg' alt='Squid tentacles')
+                        button.carousel-control-prev(type='button' data-bs-target='#carouselActions' data-bs-slide='prev')
+                            span.carousel-control-prev-icon(aria-hidden='true')
+                            span.visually-hidden Previous
+                        button.carousel-control-next.w-10(type='button' data-bs-target='#carouselActions' data-bs-slide='next')
+                            span.carousel-control-next-icon(aria-hidden='true')
+                            span.visually-hidden Next

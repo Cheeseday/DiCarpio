@@ -1,0 +1,45 @@
+h5.card-title > a{
+    color: $title_color;
+    
+    @media only screen and (min-width: 320px) {
+        font-size: $font-size-xs;
+    }
+    @media only screen and (min-width: 768px) {
+        font-size: $font-size-sm;
+    }
+    @media only screen and (min-width: 992px) {
+        font-size: $font-size-md;
+    }
+    @media only screen and (min-width: 1200px) {
+        font-size: $font-size-base;
+    }
+}
+
+.catalog_card__price {
+    color: $main-color;
+    @media only screen and (min-width: 320px) {
+        font-size: $font-size-base;
+    }
+    @media only screen and (min-width: 1200px) {
+        font-size: $font-size-mdlg;
+    }
+}
+
+.product__correction_info {
+    color: $title_color;
+    font-weight: 500;
+
+    @media only screen and (min-width: 320px) {
+        font-size: $font-size-xxs;
+    }
+    @media only screen and (min-width: 768px) {
+        font-size: 10px;
+    }
+    @media only screen and (min-width: 992px) {
+        font-size: $font-size-xs;
+    }
+}
+
+.category_description p, li{
+    font-size: $font-size-md;
+}

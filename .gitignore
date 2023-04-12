@@ -1,0 +1,20 @@
+# Ignore the node_modules directory
+node_modules/
+
+# Ignore Logs
+logs
+*.log
+
+# Ignore system files
+.vscode
+.vs
+.idea
+
+# Ignore the build directory
+/dist
+
+# Optional npm cache directory
+.npm
+
+# Some useless files
+test.pug

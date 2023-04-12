@@ -1,0 +1,29 @@
+@mixin hoveringButton($hover_color: $main-color) {
+    @media (hover: hover) {
+        &:hover {
+            color: $white;
+            border-color: $hover_color; 
+            background-color: $hover_color;
+            cursor: pointer;
+        }
+    }
+}
+
+@mixin hoveringLink($opacity: 0.6) {
+    transition: all 0.3s ease;
+    @media (hover: hover) {
+        &:hover {
+            cursor: pointer;
+            opacity: $opacity;
+        }
+    }
+}
+
+@mixin hoveringFooterLink($hover_color: $main-color) {
+    @media (hover: hover) {
+        &:hover {
+            color: $hover_color;
+            cursor: pointer;
+        }
+    }
+}

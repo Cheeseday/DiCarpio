@@ -1,0 +1,38 @@
+extends ../../layouts/layout.pug
+
+block body
+    +header
+
+    main
+        section.user_profile.mb-5
+            .container-xxl
+                .row
+                    h1.fw-semibold.fs-4.fs-md-3.fs-lg-1.px-0.py-2.py-lg-3.ps-3.ps-md-4.m-0 Личные данные
+                .row
+                    .personal_data.col-12.col-md-5.col-lg-5.col-xl-4.me-0.me-md-3.me-lg-5.pb-3.ps-3.ps-md-4.ps-lg-5.border-end
+                        h3.my-3 Персональные данные
+                        #user_name Имя:
+                            b.ps-2 &#45;
+                        #user_phone.pe-3 Телефон:
+                            b.ps-2 +375 (25) 905-54-09
+                        #user_email E-mail:
+                            b.ps-2 aleksandrkirilushkin@gmail.com
+                        #user_instagram Ник Instagram:
+                            b.ps-2 &#45;
+                        a.button_narrow.mt-3(href='edit_personal_data.html' role='button') Редактировать данные
+                    .address_data.col-12.col-md-5.col-lg-5.col-xl-4.me-0.me-md-3.me-lg-5.pb-3.ps-3.ps-md-0.border-end
+                        h3.my-3 Адресные данные
+                        #user_town Город:
+                            b.ps-2 Минск
+                        #user_street_name Улица:
+                            b.ps-2 Янки Лучины
+                        #user_house_number Дом:
+                            b.ps-2 70
+                        #user_house_building_number Корпус: 
+                            b.ps-2 &#45;
+                        #user_apartment_number Квартира:
+                            b.ps-2 &#45;
+                        a.button_narrow.mt-3(href='edit_address_data.html' role='button') Редактировать данные
+            
+    
+    +footer('darken')

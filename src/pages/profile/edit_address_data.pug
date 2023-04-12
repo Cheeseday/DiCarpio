@@ -1,0 +1,39 @@
+extends ../../layouts/layout.pug
+
+block body
+    +header
+
+    main
+        section.edit_address_data.mb-5
+            .container-xxl
+                .row
+                    h1.fw-semibold.fs-4.fs-md-3.fs-lg-1.px-0.py-2.py-lg-3.ps-3.ps-md-4.m-0 Личные данные
+                .row
+                    .address_data.col-12.pb-3.ps-3.ps-md-4.ps-lg-5
+                        h3.my-3 Адресные данные
+                        .form(method='get' name='user_address_data')
+                            .container-fluid
+                                .row
+                                    .mb-3.col-12.col-sm-8.col-md-6.col-lg-5.col-xl-4.col-xxl-3.order-sm-0.order-md-0
+                                        label.form-label.fw-semibold(for='userTown') Город
+                                            span *
+                                        input#userTown.form-control.rounded-pill(type='text' name='userTown' placeholder='Введите город' maxlength='35' required)
+                                    .mb-3.col-12.col-sm-8.col-md-6.col-lg-5.col-xl-4.col-xxl-3.order-sm-1.order-md-0
+                                        label.form-label.fw-semibold(for='userStreetName') Улица
+                                            span *
+                                        input#userStreetName.form-control.rounded-pill(type='text' name='userStreetName' placeholder='Улица' maxlength='45' required)
+                                    .mb-3.col-6.col-sm-4.col-lg-3.col-xl-2.order-sm-0.order-md-0
+                                        label.form-label.fw-semibold(for='userHouseNumber') Дом
+                                            span *
+                                        input#userHouseNumber.form-control.rounded-pill(type='number' name='userHouseNumber' placeholder='Дом' max='999' required)  
+                                    .mb-3.col-6.col-sm-4.col-lg-3.col-xl-2.order-sm-2.order-md-0
+                                        label.form-label.fw-semibold(for='userHouseBuildingNumber') Корпус
+                                        input#userHouseBuildingNumber.form-control.rounded-pill(type='number' name='userHouseBuildingNumber' placeholder='Корпус' max='999' required)  
+                                    .mb-3.col-12.col-sm-4.col-lg-3.col-xl-2.order-sm-1.order-md-0
+                                        label.form-label.fw-semibold(for='userApartmentNumber') Квартира
+                                            span *
+                                        input#userApartmentNumber.form-control.rounded-pill(type='number' name='userApartmentNumber' placeholder='Квартира' max='999' required)    
+                                .row
+                                    button.button_wide.my-3.fs-6(type='submit') Сохранить изменения
+                a.button_narrow.mt-3.ms-4(href='profile.html' role='button') Вернуться назад
+    +footer('darken')
