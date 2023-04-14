@@ -1,0 +1,50 @@
+extends ../../../layouts/layout.pug
+
+block body
+    +header
+    +bottom_menu()
+
+    +category('Морепродукты')
+        block content
+            +catalog_card('Креветка королевская 41/50 в/м с/г', '29.00 руб / кг', 'цена за упаковку 0,5 кг - 14,50 руб', 'royal_shrimp.html')
+                img(src='../../../assets/images/product_categories/seafood/royal_shrimp/royal_shrimp_1.jpg' alt='Royal shrimp' class='rounded-top card-img-top')
+                .product__label-wrap
+                    .new_label Новинка
+            +catalog_card('Кальмар тушка н/р', '20.00 руб / кг', 'за упаковку 550 гр - 11,00 руб', 'squid_carcass.html')
+                img(src='../../../assets/images/product_categories/seafood/squid_carcass/squid_1.jpg' alt='Squid carcass' class='rounded-top card-img-top img-fluid')
+            +catalog_card('Вонголе 41/50', '10.50 руб / уп', 'за упаковку 500 гр', 'vongole.html')
+                img(src='../../../assets/images/product_categories/seafood/vongole/vongole_1.jpeg' alt='Vongole' class='rounded-top card-img-top')
+            +catalog_card('Кальмар щупальца на шпажке', '16.50 руб / уп', 'цена за упаковку 500 гр', 'squid_tentacles.html')
+                img(src='../../../assets/images/product_categories/seafood/squid_tentacles/squid_tentacles_1.jpeg' alt='Squid tentacles' class='rounded-top card-img-top img-fluid')
+                .product__label-wrap
+                    .promo_label Акция
+                    .new_label Новинка
+            +catalog_card('Креветка аргентинская L2 (Langostino)', '39.00 руб / кг', 'цена за упаковку 1 кг', 'shrimp_l2.html')
+                img(src='../../../assets/images/product_categories/seafood/shrimp_l2/langostino_l2_1.jpeg' alt='Langostino shrimp' class='rounded-top card-img-top img-fluid')
+                .product__label-wrap
+                    .promo_label Акция
+            +catalog_card('Мидии в раковинах 40/60', '19.00 руб / кг', 'цена за упаковку 1 кг', 'mussels_in_shells.html')
+                img(src='../../../assets/images/product_categories/seafood/mussels_in_shells/mussels_1.jpeg' alt='Mussels in shells' class='rounded-top card-img-top img-fluid')
+            +catalog_card('Медальоны тунца', '13.10 руб / уп', 'за упаковку 500 гр', 'tuna_medallions.html')
+                img(src='../../../assets/images/product_categories/fillets_and_steaks/tuna_medallions/tuna_medallions_2.jpg' alt='Tuna medallions' class='rounded-top card-img-top img-fluid') 
+            +catalog_card('Медальоны хека', '20.50 руб / кг', 'цена за упаковку 1,1 кг - 22,55 руб', 'hake_medallions.html')
+                img(src='../../../assets/images/product_categories/fillets_and_steaks/hake_medallions/hake_medallions_1.jpeg' alt='Hake medallions' class='rounded-top card-img-top img-fluid')
+            +catalog_card('Обрези лососёвые', '11.00 руб / кг', 'цена за упаковку 0,85 кг - 9,35 руб', 'salmon_trimmings.html')
+                img(src='../../../assets/images/product_categories/red_fish/salmon_trimmings/salmon_trimmings_1.jpg' alt='Salmon trimmings' class='rounded-top card-img-top img-fluid')
+                      
+    block description
+        .container-xxl
+            .category_description.p-2.p-md-3
+                h2.text-center.fs-4.fs-sm-3 Морепродукты в интернет-магазине DiCarpio
+                p К морепродуктам относятся морские организмы и растения, пригодные для употребления в пищу. Из даров моря можно приготовить вкусные и полезные блюда. К сожалению, качество морепродуктов в большинстве магазинов оставляет желать лучшего. От свежести морских продуктов зависит их витаминный состав, а также вкусовые качества итогового блюда. Чтобы получить истинное наслаждение от морских деликатесов необходимо отдавать предпочтение продукции высокого качества, а для этого нужно знать, где купить свежие морепродукты.
+                p Компания DiCarpio является надёжным поставщиком морепродуктов. Перед поступлением в продажу вся продукция проходит тщательный отбор. У нас вы найдёте самые разнообразные морепродукты по доступным ценам.
+                h3.text-center.fs-5.fs-sm-4 Польза морепродуктов
+                p <b> Для сохранения здоровья и молодости морские дары стоит включить в ежедневный рацион. Эти продукты: </b>
+                ul
+                    li Обладают массой полезных свойств;
+                    li Являются источником витаминов, минералов и микроэлементов;
+                    li Содержат белок, который легко усваивается организмом.
+                p Польза морепродуктов зависит от биохимического состава, но все они богаты полиненасыщенными жирными кислотами омега-3 и омега-6, которые оказывают положительное влияние на сердечно-сосудистую систему, улучшают работу желудочно-кишечного тракта, регулируют обменные процессы, стабилизируют психоэмоциональное состояние, укрепляют иммунитет, улучшают состояние кожных покровов.
+                p Разнообразным ассортиментом морских даров могут похвастаться немногие поставщики. Такое можно встретить только в магазинах, сотрудники которых полностью отдаются любимому делу.
+
+    +footer("darken")

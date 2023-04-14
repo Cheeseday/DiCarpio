@@ -1,18 +1,18 @@
-mixin catalog_card(card_title='Fillet', card_price='100 byn/kg', product__info='цена за упаковку 1 кг', href="#")
+mixin catalog_card(card_title='Fillet', card_price='100 byn/kg', product__info='цена за упаковку 1 кг', href='#', id='')
     .col.px-1.py-2.px-sm-2.py-sm-3
-        .card.rounded.border-0.shadow
+        .card.rounded.border-0.shadow(id= `${id}`)
             a(href= `${href}`)
                 if block
                     block
-            .card-body
+            .card-body.p-2.p-md-3
                 h5.card-title.card_title.my-0
-                    a.fw-semibold(href= `${href}`)= card_title
-                span.catalog_card__price.fw-bolder.fs-md-5.my-0= card_price 
+                    a.fw-semibold(href= `${href}` data-title)= card_title
+                span.catalog_card__price.fw-bolder.fs-md-5.my-0(data-price)= card_price 
                 br
-                span.product__correction_info= product__info
+                span.product__correction_info(data-subtitle)= product__info
                 br
                 hr.m-0
-                button.button_product_card.w-100.w-sm-75.mb-3.mx-auto
+                button.button_product_card.mb-3.mx-auto
                     i
                     | В корзину
                 if blocks
