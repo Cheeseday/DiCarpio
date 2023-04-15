@@ -1,0 +1,21 @@
+.promo_label {
+    @extend %label_settings;
+    background: $promo_label_color;
+}
+.new_label {
+    @extend %label_settings;
+    background: $new_label_color;
+}
+.commend_label {
+    @extend %label_settings;
+    background: $commend_label_color;
+}
+
+.product__label-wrap {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}

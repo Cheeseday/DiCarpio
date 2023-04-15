@@ -29,7 +29,7 @@ mixin cl(id='carouselSlide', items, activeSlide= 2, controls='c', indicators='i'
                 span.visually-hidden Next
 
 mixin start_page_carousel()
-    article
+    article.mb-5
         .container-xxl
             .row
                 .col-12
@@ -41,14 +41,10 @@ mixin start_page_carousel()
                             button(type='button' data-bs-target='#carouselActions' data-bs-slide-to='3' aria-label='Slide 4')
                             button(type='button' data-bs-target='#carouselActions' data-bs-slide-to='4' aria-label='Slide 5')
                             button(type='button' data-bs-target='#carouselActions' data-bs-slide-to='5' aria-label='Slide 6')
-                            button(type='button' data-bs-target='#carouselActions' data-bs-slide-to='6' aria-label='Slide 7')
                         .carousel-inner
                             .carousel-item.active
                                 a(href='dorado.html')
                                     img.d-block.w-100.rounded(src='../../assets/images/main_page_images/main_dorado.jpg' alt='Dorado')
-                            .carousel-item
-                                a(href='#')
-                                    img.d-block.w-100.rounded(src='assets/images/main_page_images/kalmar-tushka.jpg' alt='Squid carcass')
                             .carousel-item
                                 a(href='hake_medallions.html')
                                     img.d-block.w-100.rounded(src='assets/images/main_page_images/medalony-heka.jpg' alt='Hake medallions')
@@ -56,13 +52,13 @@ mixin start_page_carousel()
                                 a(href='sea_bass.html')
                                     img.d-block.w-100.rounded(src='assets/images/main_page_images/sibas-300-400.jpg' alt='Sea bass')
                             .carousel-item
-                                a(href='hake_medallions.html')
+                                a(href='sockeye_steaks.html')
                                     img.d-block.w-100.rounded(src='../../assets/images/main_page_images/main_stejki-nerki.jpg' alt='sockeye steaks')
                             .carousel-item
-                                a(href='tuna_medallions.html')
+                                a(href='tuna_steaks.html')
                                     img.d-block.w-100.rounded(src='../../assets/images/main_page_images/main_stejki-tuncza.jpg' alt='tuna steaks')
                             .carousel-item
-                                a(href='sea_bass.html')
+                                a(href='squid_tentacles.html')
                                     img.d-block.w-100.rounded(src='../../assets/images/main_page_images/main_shhupalcza_kalmara.jpg' alt='Squid tentacles')
                         button.carousel-control-prev(type='button' data-bs-target='#carouselActions' data-bs-slide='prev')
                             span.carousel-control-prev-icon(aria-hidden='true')
@@ -73,42 +69,48 @@ mixin start_page_carousel()
 
 
 mixin carousel_products_for_shares()
-            .products_for_shares.d-block
-                .container.my-3.d-flex.justify-content-center
-                    .row.justify-content-center
-                        #carouselShares.carousel.slide.p-md-3
+                    .row.products_for_shares.inactive
+                        #carouselShares.carousel.slide.p-md-3.d-flex.justify-content-center
                             .carousel-indicators.mb-1.mb-md-2.mb-lg-3
                                 button.active(type='button' data-bs-target='#carouselShares' data-bs-slide-to='0' aria-current='true' aria-label='Slide 1')
                                 button(type='button' data-bs-target='#carouselShares' data-bs-slide-to='1' aria-label='Slide 2')
                             .carousel-inner
                                 .carousel-item.active
-                                    .row
+                                    .row.d-flex.justify-content-center
                                         .col-md-4.col-lg-3.p-2.p-md-3
-                                            +catalog_card('Сибас н/р 300-400', '23.60 руб / кг', 'за упаковку 750 гр - 17,70 руб', 'sea_bass.html')
-                                                img(src='../../../assets/images/product_categories/fresh_frozen_fish/sea_bass/sea_bass_1.jpeg' alt='Sea bass 300-400' class='rounded-top card-img-top')
+                                            +catalog_card('Кальмар щупальца на шпажке', '16.50 руб / уп', 'цена за упаковку 500 гр', 'squid_tentacles.html')
+                                                img(src='../../../assets/images/product_categories/seafood/squid_tentacles/squid_tentacles_1.jpeg' alt='Squid tentacles' class='rounded-top card-img-top img-fluid')
                                                 .product__label-wrap
                                                     .promo_label Акция
+                                                    .new_label Новинка
                                         .col-md-4.col-lg-3.p-2.p-md-3
                                             +catalog_card('Дорадо н/р 300-400', '27.35 руб / кг', 'цена за упаковку 0,7 кг - 19,15 руб', 'dorado.html')
                                                 img(src='../../../assets/images/product_categories/fresh_frozen_fish/dorado/dorado.jpeg' alt='Dorado_300-400' class='rounded-top card-img-top')
                                                 .product__label-wrap
                                                     .promo_label Акция
                                         .col-md-4.col-lg-3.p-2.p-md-3
-                                            +catalog_card('Окунь морской 300-500 ПБГ', '21.55 руб / кг', 'за упаковку 850 кг - 18,32 руб', 'red_sea_perch.html')
-                                                img(src='../../../assets/images/product_categories/fresh_frozen_fish/sea_perch/red-sea-perch.jpg' alt='Red sea perch' class='rounded-top card-img-top')
+                                            +catalog_card('Треска Атлантическая ПБГ 0,5-1,0 кг', '17.70 руб / кг', 'цена за упаковку 1,5 кг - 26,55 руб', 'codfish.html')
+                                                img(src='../../../assets/images/product_categories/fresh_frozen_fish/codfish/cod-codfish.jpg' alt='Cod 500-1000' class='rounded-top card-img-top')
                                                 .product__label-wrap
                                                     .promo_label Акция
                                         .col-md-4.col-lg-3.p-2.p-md-3
-                                            +catalog_card('Треска Атлантическая ПБГ 0,5-1,0 кг', '17.70 руб / кг', 'цена за упаковку 1,5 кг - 26,55 руб', 'codfish.html')
-                                                img(src='../../../assets/images/product_categories/fresh_frozen_fish/codfish/cod-codfish.jpg' alt='Cod 500-1000' class='rounded-top card-img-top')
+                                            +catalog_card('Креветка аргентинская L2 (Langostino)', '39.00 руб / кг', 'цена за упаковку 1 кг', 'shrimp_l2.html')
+                                                img(src='../../../assets/images/product_categories/seafood/shrimp_l2/langostino_l2_1.jpeg' alt='Langostino shrimp' class='rounded-top card-img-top img-fluid')
+                                                .product__label-wrap
+                                                    .promo_label Акция
                                 .carousel-item
-                                    .row
+                                    .row.d-flex.justify-content-center
                                         .col-md-4.col-lg-3.p-2.p-md-3
                                             +catalog_card('Стейки нерки 150-250', '38.50 руб / кг', 'цена за упаковку 600 гр - 23,10 руб', 'sockeye_steaks.html')
-                                                img(src='../../../assets/images/product_categories/fillets_and_steaks/sockeye_steaks/sockeye_1.jpeg' alt='Sockeye' class='rounded-top card-img-top') 
+                                                img(src='../../../assets/images/product_categories/fillets_and_steaks/sockeye_steaks/sockeye_1.jpeg' alt='Sockeye' class='rounded-top card-img-top')
+                                                .product__label-wrap
+                                                    .promo_label Акция
+                                                    .new_label Новинка
                                         .col-md-4.col-lg-3.p-2.p-md-3
                                             +catalog_card('Стейки тунца 50+', '16.50 руб / уп', 'цена за упаковку 0,5 кг', 'tuna_steaks.html')
                                                 img(src='../../../assets/images/product_categories/fillets_and_steaks/tuna_steaks/tuna_steaks_1.jpeg' alt='Tuna steaks' class='rounded-top card-img-top')
+                                                .product__label-wrap
+                                                    .promo_label Акция
                                 button.carousel-control-prev(type='button' data-bs-target='#carouselShares' data-bs-slide='prev')
                                     span.carousel-control-prev-icon(aria-hidden='true')
                                     span.visually-hidden Previous
@@ -117,47 +119,53 @@ mixin carousel_products_for_shares()
                                     span.visually-hidden Next
 
 mixin carousel_new_products()
-            .new_products.d-block
-                .container.my-3.d-flex.justify-content-center
-                    .row.justify-content-center
-                        #carouselNewProducts.carousel.slide.p-md-3
+                    .row.new_products
+                        #carouselNewProducts.carousel.slide.p-md-3.d-flex.justify-content-center
                             .carousel-indicators.mb-1.mb-md-2.mb-lg-3
                                 button.active(type='button' data-bs-target='#carouselNewProducts' data-bs-slide-to='0' aria-current='true' aria-label='Slide 1')
                                 button(type='button' data-bs-target='#carouselNewProducts' data-bs-slide-to='1' aria-label='Slide 2')
                             .carousel-inner
                                 .carousel-item.active
-                                    .row
+                                    .row.d-flex.justify-content-center
+                                        .col-md-4.col-lg-3.p-2.p-md-3
+                                            +catalog_card('Основа для пасты "Креветки в шпинатном соусе"', '12.00 руб / уп', 'цена за упаковку 230 гр.', 'shrimp_in_sauce.html')
+                                                img(src='../../../assets/images/product_categories/semis/shrimp_in_spinach_sauce/shrimp_in_spinach_sauce_1.jpeg' alt='Shrimp in spinach sauce' class='rounded-top card-img-top')
+                                                .product__label-wrap
+                                                    .new_label Новинка
+                                        .col-md-4.col-lg-3.p-2.p-md-3
+                                            +catalog_card('Рулеты из сёмги с сыром и оливками', '90.00 руб / кг', 'цена за упаковку 450 гр - 40,50 руб', 'salmon_rolls.html')
+                                                img(src='../../../assets/images/product_categories/semis/salmon_rolls/salmon_rolls_1.jpeg' alt='Salmon rolls' class='rounded-top card-img-top img-fluid')
+                                                .product__label-wrap
+                                                    .new_label Новинка
+                                        .col-md-4.col-lg-3.p-2.p-md-3
+                                            +catalog_card('Основа для пасты "Лосось в шпинатном соусе"', '15.00 руб / уп', 'цена за упаковку 230 гр.', 'salmon_in_sauce.html')
+                                                img(src='../../../assets/images/product_categories/semis/salmon_in_spinach_sauce/salmon_in_spinach_sauce_1.jpeg' alt='Salmon in spinach sauce' class='rounded-top card-img-top img-fluid')
+                                                .product__label-wrap
+                                                    .new_label Новинка
                                         .col-md-4.col-lg-3.p-2.p-md-3
                                             +catalog_card('Кальмар щупальца на шпажке', '16.50 руб / уп', 'цена за упаковку 500 гр', 'squid_tentacles.html')
                                                 img(src='../../../assets/images/product_categories/seafood/squid_tentacles/squid_tentacles_1.jpeg' alt='Squid tentacles' class='rounded-top card-img-top img-fluid')
                                                 .product__label-wrap
                                                     .promo_label Акция
                                                     .new_label Новинка
-                                        .col-md-4.col-lg-3.p-2.p-md-3
-                                            +catalog_card('Креветка аргентинская L2 (Langostino)', '39.00 руб / кг', 'цена за упаковку 1 кг', 'shrimp_l2.html')
-                                                img(src='../../../assets/images/product_categories/seafood/shrimp_l2/langostino_l2_1.jpeg' alt='Langostino shrimp' class='rounded-top card-img-top img-fluid')
-                                                .product__label-wrap
-                                                    .promo_label Акция
-                                        .col-md-4.col-lg-3.p-2.p-md-3
-                                            +catalog_card('Дорадо н/р 300-400', '27.35 руб / кг', 'цена за упаковку 0,7 кг - 19,15 руб', 'dorado.html')
-                                                img(src='../../../assets/images/product_categories/fresh_frozen_fish/dorado/dorado.jpeg' alt='Dorado_300-400' class='rounded-top card-img-top')
-                                        .col-md-4.col-lg-3.p-2.p-md-3
-                                            +catalog_card('Окунь морской 300-500 ПБГ', '21.55 руб / кг', 'за упаковку 850 кг - 18,32 руб', 'red_sea_perch.html')
-                                                img(src='../../../assets/images/product_categories/fresh_frozen_fish/sea_perch/red-sea-perch.jpg' alt='Red sea perch' class='rounded-top card-img-top')
-                                        .col-md-4.col-lg-3.p-2.p-md-3
-                                            +catalog_card('Треска Атлантическая ПБГ 0,5-1,0 кг', '17.70 руб / кг', 'цена за упаковку 1,5 кг - 26,55 руб', 'codfish.html')
-                                                img(src='../../../assets/images/product_categories/fresh_frozen_fish/codfish/cod-codfish.jpg' alt='Cod 500-1000' class='rounded-top card-img-top')
                                 .carousel-item
-                                    .row
+                                    .row.d-flex.justify-content-center
+                                        .col-md-4.col-lg-3.p-2.p-md-3
+                                            +catalog_card('Основа для пасты "Мидии в томатном соусе"', '7.00 руб / уп', 'цена за упаковку 230 гр.', 'mussels_in_tomato.html')
+                                                img(src='../../../assets/images/product_categories/semis/mussels_in_tomato_sauce/mussels_in_sauce.jpeg' alt='Mussels in tomato sauce' class='rounded-top card-img-top')
+                                                .product__label-wrap
+                                                    .new_label Новинка 
                                         .col-md-4.col-lg-3.p-2.p-md-3
                                             +catalog_card('Стейки нерки 150-250', '38.50 руб / кг', 'цена за упаковку 600 гр - 23,10 руб', 'sockeye_steaks.html')
-                                                img(src='../../../assets/images/product_categories/fillets_and_steaks/sockeye_steaks/sockeye_1.jpeg' alt='Sockeye' class='rounded-top card-img-top') 
+                                                img(src='../../../assets/images/product_categories/fillets_and_steaks/sockeye_steaks/sockeye_1.jpeg' alt='Sockeye' class='rounded-top card-img-top')
                                                 .product__label-wrap
                                                     .promo_label Акция
                                                     .new_label Новинка
                                         .col-md-4.col-lg-3.p-2.p-md-3
-                                            +catalog_card('Стейки тунца 50+', '16.50 руб / уп', 'цена за упаковку 0,5 кг', 'tuna_steaks.html')
-                                                img(src='../../../assets/images/product_categories/fillets_and_steaks/tuna_steaks/tuna_steaks_1.jpeg' alt='Tuna steaks' class='rounded-top card-img-top')
+                                            +catalog_card('Основа для пасты "Сливочная с укропом и кальмаром"', '10.00 руб / уп', 'цена за упаковку 230 гр.', 'squid_with_dill.html')
+                                                img(src='../../../assets/images/product_categories/semis/squid_with_dill/squid_with_dill.jpeg' alt='Squid' class='rounded-top card-img-top img-fluid')
+                                                .product__label-wrap
+                                                    .new_label Новинка
                                 button.carousel-control-prev(type='button' data-bs-target='#carouselNewProducts' data-bs-slide='prev')
                                     span.carousel-control-prev-icon(aria-hidden='true')
                                     span.visually-hidden Previous
@@ -166,39 +174,40 @@ mixin carousel_new_products()
                                     span.visually-hidden Next
 
 mixin carousel_commend_products()
-            .commend_products.d-block
-                .container.my-3.d-flex.justify-content-center
-                    .row.justify-content-center
-                        #carouselCommendProducts.carousel.slide.p-md-3
+                    .row.commend_products.inactive
+                        #carouselCommendProducts.carousel.slide.p-md-3.d-flex.justify-content-center
                             .carousel-indicators.mb-1.mb-md-2.mb-lg-3
                                 button.active(type='button' data-bs-target='#carouselCommendProducts' data-bs-slide-to='0' aria-current='true' aria-label='Slide 1')
-                                button(type='button' data-bs-target='#carouselCommendProducts' data-bs-slide-to='1' aria-label='Slide 2')
+                                //button(type='button' data-bs-target='#carouselCommendProducts' data-bs-slide-to='1' aria-label='Slide 2')
                             .carousel-inner
                                 .carousel-item.active
-                                    .row
+                                    .row.d-flex.justify-content-center
                                         .col-md-4.col-lg-3.p-2.p-md-3
-                                            +catalog_card('Сибас н/р 300-400', '23.60 руб / кг', 'за упаковку 750 гр - 17,70 руб', 'sea_bass.html')
-                                                img(src='../../../assets/images/product_categories/fresh_frozen_fish/sea_bass/sea_bass_1.jpeg' alt='Sea bass 300-400' class='rounded-top card-img-top')
+                                            +catalog_card('Филе сёмги н/к с/м', '84.00 руб / кг', 'цена за упаковку 2,0 кг - 168 руб', 'salmon_fillet.html')
+                                                img(src='../../../assets/images/product_categories/fillets_and_steaks/salmon_fillet/salmon_fillet.jpg' alt='Salmon fillet' class='rounded-top card-img-top')
+                                                .product__label-wrap
+                                                    .commend_label Рекомендуем
                                         .col-md-4.col-lg-3.p-2.p-md-3
-                                            +catalog_card('Дорадо н/р 300-400', '27.35 руб / кг', 'цена за упаковку 0,7 кг - 19,15 руб', 'dorado.html')
-                                                img(src='../../../assets/images/product_categories/fresh_frozen_fish/dorado/dorado.jpeg' alt='Dorado_300-400' class='rounded-top card-img-top')
+                                            +catalog_card('Обрези лососёвые', '11.00 руб / кг', 'цена за упаковку 0,85 кг - 9,35 руб', 'salmon_trimmings.html')
+                                                img(src='../../../assets/images/product_categories/red_fish/salmon_trimmings/salmon_trimmings_1.jpg' alt='Salmon trimmings' class='rounded-top card-img-top')
+                                                .product__label-wrap
+                                                    .commend_label Рекомендуем
                                         .col-md-4.col-lg-3.p-2.p-md-3
                                             +catalog_card('Окунь морской 300-500 ПБГ', '21.55 руб / кг', 'за упаковку 850 кг - 18,32 руб', 'red_sea_perch.html')
                                                 img(src='../../../assets/images/product_categories/fresh_frozen_fish/sea_perch/red-sea-perch.jpg' alt='Red sea perch' class='rounded-top card-img-top')
-                                        .col-md-4.col-lg-3.p-2.p-md-3
-                                            +catalog_card('Треска Атлантическая ПБГ 0,5-1,0 кг', '17.70 руб / кг', 'цена за упаковку 1,5 кг - 26,55 руб', 'codfish.html')
-                                                img(src='../../../assets/images/product_categories/fresh_frozen_fish/codfish/cod-codfish.jpg' alt='Cod 500-1000' class='rounded-top card-img-top')
-                                .carousel-item
-                                    .row
-                                        .col-md-4.col-lg-3.p-2.p-md-3
-                                            +catalog_card('Стейки нерки 150-250', '38.50 руб / кг', 'цена за упаковку 600 гр - 23,10 руб', 'sockeye_steaks.html')
-                                                img(src='../../../assets/images/product_categories/fillets_and_steaks/sockeye_steaks/sockeye_1.jpeg' alt='Sockeye' class='rounded-top card-img-top') 
-                                        .col-md-4.col-lg-3.p-2.p-md-3
-                                            +catalog_card('Стейки тунца 50+', '16.50 руб / уп', 'цена за упаковку 0,5 кг', 'tuna_steaks.html')
-                                                img(src='../../../assets/images/product_categories/fillets_and_steaks/tuna_steaks/tuna_steaks_1.jpeg' alt='Tuna steaks' class='rounded-top card-img-top')
-                                button.carousel-control-prev(type='button' data-bs-target='#carouselCommendProducts' data-bs-slide='prev')
-                                    span.carousel-control-prev-icon(aria-hidden='true')
-                                    span.visually-hidden Previous
-                                button.carousel-control-next.w-10(type='button' data-bs-target='#carouselCommendProducts' data-bs-slide='next')
-                                    span.carousel-control-next-icon(aria-hidden='true')
-                                    span.visually-hidden Next
+                                                .product__label-wrap
+                                                    .commend_label Рекомендуем
+                                //- .carousel-item
+                                //-     .row
+                                //-         .col-md-4.col-lg-3.p-2.p-md-3
+                                //-             +catalog_card('Стейки нерки 150-250', '38.50 руб / кг', 'цена за упаковку 600 гр - 23,10 руб', 'sockeye_steaks.html')
+                                //-                 img(src='../../../assets/images/product_categories/fillets_and_steaks/sockeye_steaks/sockeye_1.jpeg' alt='Sockeye' class='rounded-top card-img-top') 
+                                //-         .col-md-4.col-lg-3.p-2.p-md-3
+                                //-             +catalog_card('Стейки тунца 50+', '16.50 руб / уп', 'цена за упаковку 0,5 кг', 'tuna_steaks.html')
+                                //-                 img(src='../../../assets/images/product_categories/fillets_and_steaks/tuna_steaks/tuna_steaks_1.jpeg' alt='Tuna steaks' class='rounded-top card-img-top')
+                                //- button.carousel-control-prev(type='button' data-bs-target='#carouselCommendProducts' data-bs-slide='prev')
+                                //-     span.carousel-control-prev-icon(aria-hidden='true')
+                                //-     span.visually-hidden Previous
+                                //- button.carousel-control-next.w-10(type='button' data-bs-target='#carouselCommendProducts' data-bs-slide='next')
+                                //-     span.carousel-control-next-icon(aria-hidden='true')
+                                //-     span.visually-hidden Next

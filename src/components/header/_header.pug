@@ -17,7 +17,7 @@ mixin header()
             .row
                 .col-12
                     .d-flex.flex-row.justify-content-between
-                        .hamburger-menu.d-md-none
+                        .hamburger-menu.d-md-none.z-3
                             input#menu__toggle(type='checkbox')
                             label.menu__btn(for='menu__toggle')
                                 i
@@ -120,7 +120,7 @@ mixin header()
                                         i
                                         | Акции
                         div.logo
-                            a(href='#')
+                            a(href='index.html')
                                 img.img-fluid.pt-2.pb-1.pb-sm-0(src='./assets/icons/logo.svg' alt='logotype')
 
                         .d-flex.flex-row.justify-content-center.align-items-center

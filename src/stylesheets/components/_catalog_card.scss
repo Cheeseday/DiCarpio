@@ -4,8 +4,11 @@ h5.card-title > a{
     @media only screen and (min-width: 320px) {
         font-size: $font-size-xs;
     }
-    @media only screen and (min-width: 768px) {
+    @media only screen and (min-width: 388px) {
         font-size: $font-size-sm;
+    }
+    @media only screen and (min-width: 576px) {
+        font-size: $font-size-md;
     }
     @media only screen and (min-width: 992px) {
         font-size: $font-size-md;
@@ -20,7 +23,7 @@ h5.card-title > a{
     @media only screen and (min-width: 320px) {
         font-size: $font-size-base;
     }
-    @media only screen and (min-width: 1200px) {
+    @media only screen and (min-width: 576px) {
         font-size: $font-size-mdlg;
     }
 }
@@ -32,7 +35,7 @@ h5.card-title > a{
     @media only screen and (min-width: 320px) {
         font-size: $font-size-xxs;
     }
-    @media only screen and (min-width: 768px) {
+    @media only screen and (min-width: 388px) {
         font-size: 10px;
     }
     @media only screen and (min-width: 992px) {

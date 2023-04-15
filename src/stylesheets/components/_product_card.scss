@@ -1,7 +1,11 @@
 /* Product card settings */
 .product_wrap {
     color: $title_color;
-    li, b, td, p{
+    li, 
+    b, 
+    td, 
+    p, 
+    ol{
         font-size: $font-size-sm;
         color: $title_color;
     }
@@ -42,8 +46,13 @@
 }
 
 #how_to_cook_wrapper {
-    p {
+    p, ol {
         width: min(800px, 100%);
+    }
+    li {
+        font-size: $font-size-sm;
+        color: $title_color;
+        font-weight: 400;
     }
 }
 
@@ -62,7 +71,4 @@
 // For div
 .active { 
     display: block;
-}
-.inactive {
-    display: none;
 }

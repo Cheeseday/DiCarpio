@@ -98,3 +98,106 @@
 //     }
 // }
    
+
+//Generated carousel
+
+#related_product_slider {
+    display: flex;
+    align-items: center;
+    width: 90vw;
+    overflow: hidden;
+
+}
+
+.btn {
+    cursor: pointer;
+    font-size: 100px;
+    width: 100px;
+ 
+}
+
+.item, .carousel, .card {
+    display: flex;
+}
+
+.carousel-wrapper {
+    width: 90vw;
+    margin: 0 20px;
+    overflow: hidden;
+}
+
+.product_carousel {
+    .carousel-control-next, 
+    .carousel-control-prev {
+        width: 8%;   
+    }
+    @media only screen and (min-width: 320px) {
+        .carousel-control-next, 
+        .carousel-control-prev {
+            width: 13%;   
+        }
+    }
+}
+
+
+
+.new_products,
+.commend_products,
+.products_for_shares {
+        width: 85vw;
+}
+
+
+#carousels_module {
+    ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        list-style: none;
+        margin: 0;
+        a {
+            color: $title_color;
+        } 
+        li {
+            @extend %link_and_icon_styles;
+            border-bottom: 3px solid transparent;
+        }
+        @media only screen and (min-width: 320px) {
+            li {
+                font-size: $font-size-xs;
+                padding: 10px 2vw;
+                margin: 0 2vw;
+            }
+        }
+        @media only screen and (min-width: 576px) {
+            li {
+                font-size: $font-size-md;
+                padding: 15px 3vw;
+                margin: 0 3vw;  
+            }
+        }
+        @media only screen and (min-width: 768px) {
+            li {
+                font-size: $font-size-base;
+                padding: 20px 3vw; 
+                margin: 0 max(3vw, 30px);
+            }
+        }
+    }
+    #tabs__caption{
+        .active {
+            a {
+                color: $main-color;
+            }
+            border-bottom: 3px solid $main-color;
+            cursor: text;
+        }
+        .inactive {
+            color: $title_color;
+        }
+    }
+    .inactive {
+        display: none;
+    }
+}

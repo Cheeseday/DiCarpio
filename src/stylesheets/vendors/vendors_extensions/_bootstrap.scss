@@ -15,8 +15,13 @@
     }
 }
 
+
+/* Change next n` prev icons for carousels */
 .bottom_menu,
-.product_carousel {
+.product_carousel,
+.new_products, 
+.commend_products, 
+.products_for_shares {
     .carousel-control-next-icon,
     .carousel-control-prev-icon { 
         display: inline-block;
@@ -56,5 +61,35 @@
         .carousel-control-prev {
             width: 13%;   
         }
+    }
+}
+
+.new_products, 
+.commend_products, 
+.products_for_shares {
+    .carousel-control-next-icon,
+    .carousel-control-prev-icon {
+        -webkit-box-shadow: 0px 0px 18px 2px rgba(34, 60, 80, 0.4);
+        -moz-box-shadow: 0px 0px 18px 2px rgba(34, 60, 80, 0.4);
+        box-shadow: 0px 0px 18px 2px rgba(34, 60, 80, 0.4);
+    }
+    .carousel-control-prev-icon {
+        margin-left: 15px;
+    }
+
+    .carousel-indicators {
+        button {
+            width:9px;
+            height:9px;
+            background-color: $main-color;
+            border: 1px solid $main-color;
+            border-radius: 30px;
+        }
+    }
+    .carousel-indicators [data-bs-target] {
+        opacity: 0.4;
+    }
+    .carousel-indicators [data-bs-target].active {
+        opacity: 1;
     }
 }

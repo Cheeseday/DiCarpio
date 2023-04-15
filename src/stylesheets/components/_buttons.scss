@@ -30,6 +30,7 @@ darken_button
 
 .button_product_card {
     @extend %button_settings;
+    width: min(100%, 140px);
     height: 36px;
     margin-top: 12px;
     padding: 0 12px;

@@ -5,9 +5,33 @@ block body
     +bottom_menu()
 
     +start_page_carousel()
-    section 
-        +carousel_commend_products()
-        +carousel_new_products()
-        +carousel_products_for_shares()
+    h1.fs-5.fs-sm-4.fs-lg-3 Магазин рыбы и морепродуктов в Беларуси
+
+    section#carousels_module
+        .container-xxl.d-flex.flex-column.align-items-center
+            .row
+                .col-12
+                    ul#tabs__caption.border-bottom.d-flex
+                        li#on_action_label.fw-bold
+                            a(href="javascript:void(0)") Сейчас на акции
+                        li#new_product_label.fw-bold.active
+                            a(href="javascript:void(0)") Новинки
+                        li#commend_label.fw-bold
+                            a(href="javascript:void(0)") Рекомендуем
+            +carousel_commend_products()
+            +carousel_new_products()
+            +carousel_products_for_shares()
+            //- #additional_content_wrapper
+            //-     .row
+            //-         .col-12.col-md-4 
+            //-         .col-12.col-md-8 
+            //-             #tabs__content
+            //-                 h3.my-3.fw-semibold Описание
+            //-                 p Кальмар неочищенный, с кожей и плавниками. Мясо кальмара - деликатесный продукт, употреблявшийся в пищу еще в Древней Греции и Древнем Риме, когда он был известен как «крылатая рыба». Кальмары водятся во многих регионах планеты, но в России в промышленных масштабах добываются только на Дальнем Востоке, в районе Курильских островов. Кальмары – ценный продукт В кальмарах есть почти все необходимые нашему организму витамины (РР, С, группы В), йод, железо, фосфор, марганец, кальций. Мясо кальмаров превосходит остальные морские деликатесы по содержанию калия: он нужен для нормального функционирования всех мышц, в том числе и самой главной – сердечной.
+            //- #how_to_cook_wrapper.inactive
+            //-     .row
+            //-         .col-12
+            //-             h3.my-3.fw-semibold Как готовить?
+            //-             p Кальмары можно отварить, обжарить или приготовить на гриле, главное — соблюдать общий принцип приготовления: мясо кальмара нельзя подвергать долгой термической обработке.
 
     +footer
