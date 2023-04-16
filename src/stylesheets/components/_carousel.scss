@@ -99,7 +99,7 @@
 // }
    
 
-//Generated carousel
+//Generated carousel (carousel inside a product card page)
 
 #related_product_slider {
     display: flex;
@@ -141,13 +141,15 @@
 
 
 
+
+/* Carousels module 
+(consist carousel with promo products, commend products, new products)  
+*/
 .new_products,
 .commend_products,
 .products_for_shares {
         width: 85vw;
 }
-
-
 #carousels_module {
     ul {
         display: flex;

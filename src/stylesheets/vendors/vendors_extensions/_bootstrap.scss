@@ -1,4 +1,7 @@
-/* Carousel settings */
+/* 
+Edit bootstrap icon styles
+    Carousel settings 
+*/
 
 @media only screen and (min-width: 768px) {
     .carousel-control-next-icon, 
@@ -16,21 +19,15 @@
 }
 
 
-/* Change next n` prev icons for carousels */
+/* Change next n` prev icons for ALL carousels */
 .bottom_menu,
 .product_carousel,
 .new_products, 
 .commend_products, 
 .products_for_shares {
     .carousel-control-next-icon,
-    .carousel-control-prev-icon { 
-        display: inline-block;
-        width: 2rem;
-        height: 2rem;
-        background-color: $white;
-        background-repeat: no-repeat;
-        border-radius: 100px;
-        background-size: 55% 55%;
+    .carousel-control-prev-icon {
+        @extend %prev_and_next_control_icon;
     }
 
     .carousel-control-prev-icon {
@@ -50,7 +47,7 @@
         }
     }
 }
-
+/* Carousel of images inside a product pages */
 .product_carousel {
     .carousel-control-next, 
     .carousel-control-prev {
@@ -63,6 +60,10 @@
         }
     }
 }
+
+/* Stylesheets for carousels module 
+(consist carousel with promo products, commend products, new products)
+*/
 
 .new_products, 
 .commend_products, 

@@ -1,4 +1,5 @@
-mixin footer(bc= 'defaultColor')
+mixin footer(bc= 'defaultColor') 
+    //Use two version of footer display: default version (with a white background) and darken version (with a dark blue color)
     footer(class= `pt-4 px-2 footer_${bc}`)
         .container-xxl
             .row
@@ -66,7 +67,6 @@ mixin footer(bc= 'defaultColor')
                             .col-12.p-0.mb-3
                                 .mb-2
                                     img.me-2(src='../../assets/icons/twitter.svg' alt='twitter')
-                                    //i
                                     span Наш Twitter
                                 p
                                     | В профиле мы делимся интересными статьями, новостями об акциях, рецептами и еще многим другим

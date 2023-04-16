@@ -1,3 +1,4 @@
+/* Include mixins for elements by hover */
 @mixin hoveringButton($hover_color: $main-color) {
     @media (hover: hover) {
         &:hover {

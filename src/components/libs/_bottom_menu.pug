@@ -2,7 +2,7 @@ mixin bottom_menu(active_page)
             .bottom_header.d-none.d-md-block
                 .container.text-center.my-3
                     .row.justify-content-center
-                        #bottomMenuCarousel.carousel.bottom_menu.slide.carousel-fade
+                        #bottomMenuCarousel.carousel.bottom_menu.slide
                             .carousel-inner(role='listbox')
                                 .carousel-item.active
                                     .row
@@ -56,20 +56,6 @@ mixin bottom_menu(active_page)
                                                     a.menu__box__item.dropdown-item.d-flex.flex-column.justify-content-center.align-items-center(href='#')
                                                         img.me-2(src='https://dicarpio.by/wp-content/uploads/2020/10/icon_5.svg' width='32' alt='Oils and spices')
                                                         span Масла и специи
-                                //- .carousel-item
-                                //-     .row
-                                //-         .col-md-4.col-lg-3
-                                //-             .card.border-0
-                                //-                 .card-img.my-3
-                                //-                     a.menu__box__item.dropdown-item.d-flex.flex-column.justify-content-center.align-items-center(href='../../pages/categories/fresh_frozen_fish/fresh_frozen_fish.html')
-                                //-                         img.me-2(src='https://dicarpio.by/wp-content/uploads/2020/10/icon_7.svg' alt='Fresh frozen fish')
-                                //-                         span Охлажденная рыба
-                                //-         .col-md-4.col-lg-3
-                                //-             .card.border-0
-                                //-                 .card-img.my-3
-                                //-                     a.menu__box__item.dropdown-item.d-flex.flex-column.justify-content-center.align-items-center(href='#')
-                                //-                         img.me-2(src='https://dicarpio.by/wp-content/uploads/2020/10/icon_6.svg' alt='Fillets and steaks')
-                                //-                         span Охлажденная рыба
                             a.carousel-control-prev.bg-transparent.w-aut(href='#bottomMenuCarousel' role='button' data-bs-slide='prev'):   span.carousel-control-prev-icon.shadow(aria-hidden='true')
                             a.carousel-control-next.bg-transparent.w-aut(href='#bottomMenuCarousel' role='button' data-bs-slide='next')
                                 span.carousel-control-next-icon.shadow(aria-hidden='true')

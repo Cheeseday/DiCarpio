@@ -94,3 +94,14 @@
     user-select: none;
     -webkit-tap-highlight-color: transparent;
 }
+
+/* Prev and next control carousel icons settings (use in vendors_extensions)*/
+%prev_and_next_control_icon {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 100px;
+    background-color: $white;
+    background-repeat: no-repeat;
+    background-size: 55% 55%;
+}

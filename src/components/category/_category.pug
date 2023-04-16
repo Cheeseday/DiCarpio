@@ -1,3 +1,4 @@
+// Template for create a block with catalog cards
 mixin category(value= 'Products', cards_amount= 4)
     .category.p-1.p-md-3
         .container-xxl
@@ -5,10 +6,3 @@ mixin category(value= 'Products', cards_amount= 4)
                 h1.fw-semibold.fs-4.fs-md-3.fs-lg-1.p-2.py-lg-3.m-0= value
                 .row.row-cols-2.row-cols-md-3.row-cols-lg-4.row-cols-xl-5
                     block content
-                //-.row
-
-                //- else
-                //-     .row
-                //-         - for (var x = 0; x < 4; x++)
-                //-             .col-3
-                //-                 +card()

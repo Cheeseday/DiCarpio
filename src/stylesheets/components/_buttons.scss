@@ -1,16 +1,4 @@
-/* Default duocolor button */
-
-/* 
-Buttons type
-
-button
-button_wide
-button_narrow
-button_product_card
-monochomatic_button
-darken_button
-
-*/
+/* Styles for buttons*/
 
 .button_narrow {
     @extend %button_settings;

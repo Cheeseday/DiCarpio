@@ -1,3 +1,4 @@
+// Use inside any catalog pages for display card of product (catalog card)
 mixin catalog_card(card_title='Fillet', card_price='100 byn/kg', product__info='цена за упаковку 1 кг', href='#', id='')
     .col.px-1.py-2.px-sm-2.py-sm-3
         .card.rounded.border-0.shadow(id= `${id}`)
@@ -17,4 +18,3 @@ mixin catalog_card(card_title='Fillet', card_price='100 byn/kg', product__info='
                     | В корзину
                 if blocks
                     blocks
-                //-+stretchedButton('', '#')
