@@ -1,0 +1,53 @@
+/* Validation stylesheets */
+input.form-control input:focus {
+    outline: 0;
+}
+
+input.form-control.error {
+    border-color: #fa2c55;
+}
+input.form-control + .error {
+    color: #ff3860;
+    margin-left: 5px;
+    font-size: 11px;
+    height: 13px;
+}
+
+/* Edit user profile pages (personal data page and address data page) stylesheets */
+.edit_personal_data,
+.edit_address_data {
+    input, input:focus {
+        height: 45px;
+        padding: 0 25px;
+        border-radius: 30px;
+        font-weight: bold;
+        font-size: 14px;
+        color: $main_color;
+    }
+    input:placeholder-shown {
+        background-color: $bc-input-color;
+        font-weight: 500;
+        border: 1px solid $bc-input-color;
+    }
+    h3 {
+        font-size: $font-size-mdlg;
+    }
+    .form-label {
+        margin-left:25px;
+        > span {
+        font-size: $font-size-mdlg;
+        font-weight: 700;
+        color: $main_color;
+        }
+    }
+    .form {
+        span.form-text {
+            margin-left: 25px;
+            font-size: $font-size-xs;
+        }   
+    }
+    button.button_wide {
+        width: 248px;
+        margin-left: 12px;
+    }
+}

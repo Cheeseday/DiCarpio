@@ -1,0 +1,53 @@
+.modal {
+    //width: 360px;
+    img {
+        width: 170px;
+        height: 68px;
+    }
+    span {
+        font-size: 14px;
+        font-weight: 600;
+    }
+    button#create_account {
+        width: 168px;
+    }
+    /* From profile, TODO (placeholder or mixin) */
+    input, input:focus {
+        height: 45px;
+        padding: 0 25px;
+        border-radius: 30px;
+        font-weight: bold;
+        font-size: 14px;
+        color: $main_color;
+    }
+
+    input:placeholder-shown {
+        background-color: $bc-input-color;
+        font-weight: 500;
+        border: 1px solid $bc-input-color;
+    }
+
+    h3 {
+        font-size: $font-size-mdlg;
+    }
+    .form-label {
+        margin-left:25px;
+        > span {
+        font-size: $font-size-mdlg;
+        font-weight: 700;
+        color: $main_color;
+        }
+    }
+    form {
+        width: 85%;
+    }
+    .form {
+        span.form-text {
+            margin-left: 25px;
+            font-size: $font-size-xs;
+        }   
+    }
+    button.button_wide {
+        width: 248px;
+    }
+}

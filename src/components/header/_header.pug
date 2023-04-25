@@ -127,7 +127,57 @@ mixin header()
                             .phone_wrapper.d-none.d-md-flex.flex-row.justify-content-center.align-items-center.me-2.border-end.border-2
                                 .phone_icon
                                 a.phone_link.icon-link.mx-2.ms-lg-4.me-lg-3(href='tel:+375 (25) 90-554-09') + 375 (25) 905-54-09
-                            a#favourite_icon.icon-link.ms-2.ms-lg-3(href='test.html'): i 
+                            a#favourite_icon.icon-link.ms-2.ms-lg-3(href='test.html' type='button' data-bs-toggle='modal' data-bs-target='#autorizationModal'): i 
                             a#user_account.icon-link.ms-2.ms-lg-3(href='profile.html'): i
                             a#grosery.icon-link.ms-2.ms-lg-3(href='#'): i
             hr.mt-2
+
+    #autorizationModal.modal.fade(tabindex='-1' aria-labelledby='autorizationModalLabel' aria-hidden='true')
+        .modal-dialog
+            .modal-content
+                .modal-header.pb-0.border-0
+                    button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
+                .modal-body.d-flex.flex-column.align-items-center.py-0.border-0
+                    img.img-fluid.pb-3(src='./assets/icons/logo.svg' alt='logotype')
+                    form.form#autorization_form(name="Autorization form")
+                        .mb-2 
+                            span Войти в личный кабинет
+                        .mb-3
+                            input#email_aut.form-control.rounded-pill(type='email' name='email' placeholder='Введите E-mail*' maxlength='45' required)
+                            .error
+                        .mb-3
+                            input#password_aut.form-control.rounded-pill(type='password' name='password' placeholder='Введите пароль*' minlength='6' maxlength='26' required) 
+                            .error
+                        .modal-footer.d-flex.flex-column.align-items-center.border-0
+                            button.button_wide.mb-3.fs-6(type='submit') Войти
+                            span.m-1 Нет аккаунта?
+                            button#create_account.button_wide.fs-6(data-bs-target="#registrationModal" data-bs-toggle="modal") Создать
+
+    #registrationModal.modal.fade(tabindex='-1' aria-labelledby='registrationModalLabel' aria-hidden='true')
+        .modal-dialog
+            .modal-content
+                .modal-header.pb-0.border-0
+                    button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
+                .modal-body.d-flex.flex-column.align-items-center.py-0.border-0
+                    img.img-fluid.pb-3(src='./assets/icons/logo.svg' alt='logotype')
+                    form.form#registration_form(name="Account registration form")
+                        .mb-2
+                            span Регистрация аккаунта
+                        .mb-3
+                            input#username_regist.form-control.rounded-pill(type='text' name='username' placeholder='Введите имя*' maxlength='45' pattern='[A-Za-z]+|[А-Яа-яЁёЎўІі]+' title='Только символы латинского или русского алфавитов' required)
+                            .error
+                        .mb-3
+                            input#tel_regist.form-control.rounded-pill(type='tel' name='tel' placeholder='Введите телефон*' required)
+                            .error
+                        .mb-3
+                            input#email_regist.form-control.rounded-pill(type='email' name='email22' placeholder='Введите E-mail*' maxlength='45' pattern='/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/' required)
+                            .error
+                        .mb-3
+                            input#password_regist.form-control.rounded-pill(type='password' name='password22' aria-labelledby='passwordHelpInline' placeholder='Введите пароль*' minlength='6' maxlength='26' required)
+                            span#passwordHelpInline.form-text Должен быть от 6 до 26 символов
+                            .error
+                        .mb-3
+                            input#password_regist_repeat.form-control.rounded-pill(type='password' name='repeatPassword' placeholder='Повторите пароль*' minlength='6' maxlength='26' required)   
+                            .error
+                        .modal-footer.d-flex.flex-column.align-items-center.border-0
+                            button.button_wide.my-3.fs-6(type='submit') Зареристрироваться
